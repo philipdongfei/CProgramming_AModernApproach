@@ -38,6 +38,6 @@ code8: code8.c
 
 
 .PHONY: clean
-	clean:
+clean:
 	-rm edit ${objects}
 	echo Clean done
