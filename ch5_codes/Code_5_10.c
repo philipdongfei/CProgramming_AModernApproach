@@ -9,7 +9,7 @@ int main(void)
     if (grade < 0 || grade > 100)
     {
         printf("Illegal grade\n");
-        return 0;
+        return 1;
     }
 
     switch(grade / 10){

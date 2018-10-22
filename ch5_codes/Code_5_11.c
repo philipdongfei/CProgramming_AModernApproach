@@ -11,6 +11,12 @@ int main(void)
     printf("Enter a two-digit number: ");
     scanf("%d", &number);
 
+    if (number < 10 || number > 99)
+    {
+        printf("Illegal number\n");
+        return 1;
+    }
+
     a = number / 10;
     b = number % 10;
 
