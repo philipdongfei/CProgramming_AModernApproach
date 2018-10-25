@@ -43,6 +43,11 @@ Code_6_8: Code_6_8.c
 	gcc -o Code_6_8.out ${GCCFLAGS} Code_6_8.c
 Code_6_10: Code_6_10.c
 	gcc -o Code_6_10.out ${GCCFLAGS} Code_6_10.c
+Code_6_11: Code_6_11.c
+	gcc -o Code_6_11.out ${GCCFLAGS} Code_6_11.c
+Code_6_12: Code_6_12.c
+	gcc -o Code_6_12.out ${GCCFLAGS} Code_6_12.c
+
 
 
 
