@@ -31,6 +31,14 @@ Code_7_10: Code_7_10.c
 	gcc -o Code_7_10.out ${GCCFLAGS} Code_7_10.c
 Code_7_11: Code_7_11.c
 	gcc -o Code_7_11.out ${GCCFLAGS} Code_7_11.c
+Code_7_12: Code_7_12.c
+	gcc -o Code_7_12.out ${GCCFLAGS} Code_7_12.c 
+Code_7_13: Code_7_13.c
+	gcc -o Code_7_13.out ${GCCFLAGS} Code_7_13.c
+Code_7_14: Code_7_14.c
+	gcc -o Code_7_14.out ${GCCFLAGS} Code_7_14.c
+Code_7_15: Code_7_15.c
+	gcc -o Code_7_15.out ${GCCFLAGS} Code_7_15.c
 
 
 
