@@ -20,7 +20,7 @@ Code_11_3: Code_11_3.c
 Code_11_4: Code_11_4.c
 	gcc -o Code_11_4.out ${GCCFALG} Code_11_4.c
 
-iPHONY: clean
+.PHONY: clean
 clean:
 	-rm edit ${objects}
 	echo Clean done

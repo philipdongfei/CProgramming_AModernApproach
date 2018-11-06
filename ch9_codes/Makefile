@@ -42,7 +42,7 @@ Code_9_8: Code_9_8.c
 
 
 
-iPHONY: clean
+.PHONY: clean
 clean:
 	-rm edit ${objects}
 	echo Clean done
