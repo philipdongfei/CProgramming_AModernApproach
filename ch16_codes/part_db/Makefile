@@ -1,0 +1,6 @@
+inventory: inventory.o readline.o
+	gcc -o inventory.out inventory.o readline.o
+inventory.o: inventory.c readline.o
+	gcc -c inventory.c
+readline.o: readline.c
+	gcc -c readline.c
