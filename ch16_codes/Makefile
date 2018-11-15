@@ -29,6 +29,10 @@ Ex_16_20: Ex_16_20.c
 	gcc -o Ex_16_20.out ${GCCFALG} Ex_16_20.c
 Code_16_1: Code_16_1.c
 	gcc -o Code_16_1.out ${GCCFALG} Code_16_1.c
+Code_16_5: Code_16_5.c
+	gcc -o Code_16_5.out ${GCCFALG} Code_16_5.c
+Code_16_6: Code_16_6.c
+	gcc -o Code_16_6.out ${GCCFALG} Code_16_6.c
 
 
 .PHONY: clean
