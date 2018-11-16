@@ -1,4 +1,4 @@
-#include    <stdio.h>
+//#include    <stdio.h>
 
 #define  GENERIC_MAX(type)    \
     type type##_max(type x, type y) \
@@ -10,13 +10,28 @@
 #define MAX(x, y)   ((x)>(y)?(x):(y))
 #define IS_EVEN(n) ((n)%2==0)
 #define TOUPPER(c)  ('a'<=(c)&&(c)<='z'?(c)-'a'+'A':(c))
+#define TEST_DO(a,b,c) \
+    do {                \
+        printf("%d,%d,%d\n", a, b, c);  \
+            if ((a) > (b)){                        \
+                if ((a) < (c)) printf("%d\n", (a));   \
+                else if ((b) > (c)) printf("%d\n", (b)); \
+                else printf("%d\n", (c));                \
+            }else {                                     \
+                if ((b) < (c)) printf("%d\n", (b));       \
+                else if ((a) > (c)) printf("%d\n", (a));   \
+                else printf("%d\n", (c));              \
+        }                                           \
+    }while (0)
 
+/*
 #define TEST_DO(a,b,c) \
     do {            \
         printf("%s", a);\
         printf("%s", b);\
         printf("%s", c);\
     } while(0)
+    */
 
 #define ECHO(s)     \
     do {            \
@@ -66,15 +81,17 @@ void f();
 
 int main()
 {
-    int x, y, i;
+    int x, y,z, i;
     float a, b;
     char    Input[256] = {0,};
     //14.3.10
     char empty_string[] = MK_STR();
     int JOIN(a,b,c), JOIN(a,b,), JOIN(a,,c), JOIN(,,c);
     abc = ab = ac = c = 0;
+    
 
-    x = 1;y = 2;
+    x = 1;y = 2;z = 0;
+    TEST_DO(x,y,z);
     printf("max: %d\n",int_max(x, y) );
     printf("max: %d\n",ADD( ,y) );  //14.3.10
     a = 1.2222; b = 0.2222;

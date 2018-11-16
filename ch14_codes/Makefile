@@ -3,6 +3,8 @@ GCCFALG:=-Wall -W -O2
 
 define_demo: define_demo.c
 	gcc -o define_demo.out ${GCCFALG} define_demo.c
+demo1: demo1.c
+	gcc -o demo1.out ${GCCFALG} demo1.c
 Ex_14_1: Ex_14_1.c
 	gcc -o Ex_14_1.out ${GCCFALG} Ex_14_1.c
 Ex_14_2: Ex_14_2.c
