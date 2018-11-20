@@ -3,12 +3,18 @@
 
 #include    <stdbool.h>
 
+#define PUBLIC
+#define PRIVATE static
+#define QUEUE_SIZE 100
+
 typedef int Item;
 
 void enqueue(Item n);
 Item dequeue();
-Item first();
-Item last();
+Item getFirst();
+Item getLast();
 bool is_empty();
+
+
 
 #endif

@@ -4,6 +4,7 @@
 
 struct node {
     Item data;
+    int len;
     struct node *next;
 };
 
@@ -57,6 +58,7 @@ void push(Stack s, Item i)
     new_node->data = i;
     new_node->next = s->top;
     s->top = new_node;
+    s->len++;
 }
 
 Item pop(Stack s)
@@ -69,6 +71,7 @@ Item pop(Stack s)
     old_top = s->top;
     i = old_top->data;
     s->top = old_top->next;
+    s->len--;
     free(old_top);
     return i;
 }
@@ -81,6 +84,11 @@ Item peek(Stack s)
         terminate("Error in pop: stack is empty.");
     top = s->top;
     return top->data;
+}
+
+int length(Stack s)
+{
+    return s->len;
 }
 
 

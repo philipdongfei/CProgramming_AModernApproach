@@ -14,6 +14,14 @@ PRIVATE void terminate(const char *message)
     exit(EXIT_FAILURE);
 }
 
+PRIVATE void resize(Stack s)
+{
+    s->contents = realloc(s->contents, 2*s->size);
+    if (s->contents == NULL)
+        terminate("Error in resize: realloc fail");
+    s->size = s->size * 2;
+}
+
 Stack create(int size)
 {
     Stack s = malloc(sizeof(struct stack_type));
@@ -55,7 +63,9 @@ bool is_full(Stack s)
 void push(Stack s, Item i)
 {
     if (is_full(s))
-        terminate("Error in push: stack is full.");
+    {
+        resize(s);
+    }
     s->contents[s->top++] = i;
 }
 

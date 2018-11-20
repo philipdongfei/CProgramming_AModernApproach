@@ -3,7 +3,7 @@
 #include    "stackADT.h"
 
 struct node {
-    Item data;
+    void *data;
     struct node *next;
 };
 
@@ -35,7 +35,9 @@ void destroy(Stack s)
 void make_empty(Stack s)
 {
     while (!is_empty(s))
-        pop(s);
+    {
+        free(pop(s));
+    }
 }
 
 bool is_empty(Stack s)
@@ -48,35 +50,34 @@ bool is_full(Stack s)
     return false;
 }
 
-void push(Stack s, Item i)
+void push(Stack s,void *p) 
 {
     struct node *new_node = malloc(sizeof(struct node));
     if (new_node == NULL)
         terminate("Error in push: stack is full.");
 
-    new_node->data = i;
+    new_node->data = p;
     new_node->next = s->top;
     s->top = new_node;
 }
 
-Item pop(Stack s)
+void *pop(Stack s)
 {
     struct node *old_top;
-    Item i;
+    void *p;
     if (is_empty(s))
         terminate("Error in pop: stack is empty.");
 
     old_top = s->top;
-    i = old_top->data;
+    p = old_top->data;
     s->top = old_top->next;
     free(old_top);
-    return i;
+    return p;
 }
 
-Item peek(Stack s)
+void *peek(Stack s)
 {
     struct node *top;
-    Item i;
     if (is_empty(s))
         terminate("Error in pop: stack is empty.");
     top = s->top;
