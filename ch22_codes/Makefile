@@ -37,11 +37,17 @@ Code_22_4_b: Code_22_4_b.c
 	gcc -o Code_22_4_b.out ${GCCFALG} Code_22_4_b.c
 Code_22_4_c: Code_22_4_c.c
 	gcc -o Code_22_4_c.out ${GCCFALG} Code_22_4_c.c
+Code_22_5: Code_22_5.c
+	gcc -o Code_22_5.out ${GCCFALG} Code_22_5.c
+Code_22_6: Code_22_6.c
+	gcc -o Code_22_6.out ${GCCFALG} Code_22_6.c
+Code_22_9: Code_22_9.c
+	gcc -o Code_22_9.out ${GCCFALG} Code_22_9.c
 
 
-.PHONY: clebn
-clebn:
+.PHONY: clean
+clean:
 	-rm edit ${objects}
-	echo Clebn done
+	echo Clean done
 
 
