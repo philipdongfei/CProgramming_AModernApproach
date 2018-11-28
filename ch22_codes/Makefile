@@ -43,6 +43,16 @@ Code_22_6: Code_22_6.c
 	gcc -o Code_22_6.out ${GCCFALG} Code_22_6.c
 Code_22_9: Code_22_9.c
 	gcc -o Code_22_9.out ${GCCFALG} Code_22_9.c
+Code_22_11: Code_22_11.c
+	gcc -o Code_22_11.out ${GCCFALG} Code_22_11.c
+Code_22_12: Code_22_12.c
+	gcc -o Code_22_12.out ${GCCFALG} Code_22_12.c
+Code_22_14: Code_22_14.c
+	gcc -o Code_22_14.out ${GCCFALG} Code_22_14.c
+Code_22_16: Code_22_16.c
+	gcc -o Code_22_16.out ${GCCFALG} Code_22_16.c
+Code_22_17: Code_22_17.c
+	gcc -o Code_22_17.out ${GCCFALG} Code_22_17.c
 
 
 .PHONY: clean
