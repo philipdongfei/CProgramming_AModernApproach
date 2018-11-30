@@ -11,7 +11,10 @@ airmiles: airmiles.c
 	gcc -o airmiles.out ${GCCFALG} airmiles.c
 datetime: datetime.c
 	gcc -o datetime.out ${GCCFALG} datetime.c
-
+Ex_26_1: Ex_26_1.c
+	gcc -o Ex_26_1.out ${GCCFALG} Ex_26_1.c
+Ex_26_2: Ex_26_2.c
+	gcc -o Ex_26_2.out ${GCCFALG} Ex_26_2.c
 
 
 .PHONY: clean
